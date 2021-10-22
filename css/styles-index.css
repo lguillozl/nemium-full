@@ -1,0 +1,443 @@
+@font-face {
+  font-family: charter;
+  src: url('../fonts/charter-regular.otf');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: charter;
+  src: url('../fonts/charter-italic.otf');
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: charter;
+  src: url('../fonts/charter-bold.otf');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: charter;
+  src: url('../fonts/charter-bold-italic.otf');
+  font-style: italic;
+  font-weight: 700;
+}
+
+:root{
+  font-size: 16px;
+  --gray30:#212121;
+  --gray20:#212429;
+  --gray10:#616161;
+}
+
+blockquote {
+  font-size: 24px;
+  margin: 32px 0;
+  padding-left: 16px;
+  line-height: 24px;
+  border-left: 4px solid var(--gray30);
+}
+
+blockquote span {
+  color: var(--gray10);
+}
+
+blockquote span::before {
+  content: "-";
+}
+
+body {
+  color: var(--gray30);
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+a {
+  color: var(--gray30)
+}
+
+details[open] summary {
+  list-style-image: url("../Images/Details-Summary-Open-Gray.png");
+}
+
+summary {
+  list-style-image: url("../Images/Details-Summary-Closed-Gray.png");
+}
+
+form {
+  position: relative;
+  margin-block-end: 113px;
+}
+
+form h2 {
+  margin-block: 40px 16px;
+}
+
+footer {
+  height: 174px;
+  background: #000000;
+  padding-block-start: 48px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+footer img {
+  margin-inline-end: 19px;
+}
+
+header {
+  width: 188px;
+  font-size: 14px;
+  /* background: red; */
+  color: var(--gray10);
+  position: absolute;
+  top: 64px;
+  left: -232px;
+}
+
+header a {
+  color: var(--gray10);
+  text-decoration: none;
+}
+
+header a:hover {
+  color:var(--gray30);
+}
+
+header li {
+  margin-bottom: 16px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 60px;
+  margin: 64px 52px 16px 48px;
+  font-weight: normal;
+}
+
+h1 ~ p {
+  margin-bottom: 64px;
+}
+
+h2 {
+  font-size: 32px;
+  margin: 64px 0px 40px;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: normal;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+hr {
+  margin: 64px 0px;
+}
+
+.header{
+  /* border: 1px solid red; */
+  position: sticky;
+  top: 0;
+}
+
+.header-content{
+  position: relative;
+}
+
+input[type="text"], input[type="email"] {
+  box-sizing: border-box;
+  height: 48px;
+  width: 280px;
+  padding: 12px 16px;
+  border: 1px solid #616161;
+  border-radius: 90px;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+}
+
+input[type="submit"] {
+  position: absolute;
+  border: none;
+  right: 319px;
+  height: 48px;
+  width: 119px;
+  background: #000000;
+  color: #FFFFFF;
+  border-radius: 90px;
+}
+
+/* .main { */
+  /* position: relative; */
+/* } */
+
+.wrapper {
+  width: 902px;
+  margin-inline: 348px 116px;
+}
+
+.main-content{
+  background:white;
+  /* padding: 20px; */
+}
+
+.debug {
+  border: 1px solid red;
+  box-shadow: inset 0 0 0 1px red;
+  background: red;
+  outline: 1px solid red;
+}
+
+.slider-bullet {
+  display: inline-block;
+  background: #424242;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.slider-bullet-list {
+  margin-block-start: 16px;
+  text-align: center;
+}
+
+.slider-container {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 0;
+  scroll-behavior: smooth;
+}
+
+.video{
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  aspect-ratio: 16/9;
+  height: auto;
+}
+
+.no-count h3::before {
+  content: none;
+}
+
+.section-content + hr {
+  display: none;
+}
+
+.section-content {
+  counter-reset: tittleList;
+}
+
+.section-content img {
+  margin-top: 40px;
+}
+
+.section-content h3 {
+  counter-increment: tittleList;
+  padding-bottom: 8px;
+}
+
+.section-content h3::before {
+  content: counter(tittleList, decimal) '. ';
+}
+
+.section-content h3::after {
+  content: '';
+  width: 80px;
+  height: 4px;
+  background: rgba(66,66,66,1);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.no-h3-after h3::after {
+  content: none;
+}
+
+.section-content ul li {
+  margin-top: 16px;
+}
+
+.hero {
+  background-image: linear-gradient(to top,rgba(255,255,255,.2), transparent), url('../images/pattern.png');
+  height: 350px;
+}
+
+.variantes {
+  margin-block: 16px 104px;
+  list-style-type: none;
+  padding-inline-start: 23px;
+}
+
+.variantes a{
+  font-weight: 500;
+  display: block;
+  padding: 8px 0px 8px 8px;
+  width: 188px;
+}
+
+ .variantes a:hover{
+  background: #000000;
+  border-radius: 4px;
+  max-inline-size: 100%;
+  color: #FFFFFF;
+}
+
+nav details summary {
+  font-weight: bold;
+  line-height: 24px;
+}
+
+pre {
+  background: #FEC62E;
+  overflow: hidden;
+  padding: 40px;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+span {
+  font-style: italic;
+  font-weight: 700;
+}
+
+summary {
+  padding-inline-start: 25px;
+}
+
+@media screen and (max-width: 360px){
+
+  #google-chrome {
+    content: url(/images/google-chrome-black-64.png);
+  }
+
+  #visual-studio-code {
+    content: url(/images/visual-studio-code-black-64.png);
+  }
+
+  #figma {
+    content: url(/images/figma-black-64.png);
+  }
+
+  #github {
+    content: url(/images/github-black-64.png);
+  }
+  blockquote {
+    margin-block: 40px;
+    font-size: 16px;
+  }
+
+  blockquote p {
+    line-height: 32px;
+    margin-block: 0px 4px;
+  }
+
+  blockquote span {
+    font-style: normal;
+    color: #616161;
+    font-weight: 400;
+  }
+
+  form {
+    margin-block-end: 40px;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-block: 40px 16px;
+    margin-inline: 0px;
+  }
+
+  h1 ~ p {
+    margin-block-end: 40px;
+  }
+
+  h2 {
+    margin: 40px 0px 24px;
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+    margin-block-end: 16px;
+  }
+
+  header, .header {
+    position: static;
+    width: auto;
+  }
+
+  hr {
+    margin-block: 0px;
+  }
+
+  img {
+    max-inline-size: 100%;
+  }
+
+  input[type="text"] {
+    margin-block-end: 16px;
+  }
+
+  input[type="text"], input[type="email"] {
+    width: 328px;
+  }
+
+  input[type="submit"] {
+    right: 0px;
+  }
+
+  .conceptos, .setup {
+    display: none;
+  }
+
+  .hero {
+    height: 96px;
+    margin-block-end: 16px;
+  }
+
+  p {
+    line-height: 24px;
+  }
+
+  pre {
+    margin-block-end: 24px;
+  }
+
+  .section-content img {
+    display: block;
+    margin-top: 24px;
+  }
+
+  .variantes {
+    padding-inline-start: 0px;
+    margin-block-end: 40px;
+  }
+
+  .variantes a {
+    width: auto;
+  }
+
+  .wrapper {
+    width: 328px;
+    margin: auto;
+  }
+
+  summary {
+    padding-inline-start: 0px;
+  }
+}
